@@ -11,14 +11,37 @@ public class BinaryTreeSample {
 		
 	}
 	
-	public void setRoot(Node node)
+	public void printNodes()
 	{
-		this.rootNode = node;
+		printNodes(rootNode);
 	}
 	
-	public void addNode(Node parent, Node newNode)
+	private void printNodes(Node key)
+	{
+		if(key.value != null)
+		{
+			key.printNode();
+		}
+		if(key.children[0] != null)
+		{
+			printNodes(key.children[0]);
+		}
+		if(key.children[1] != null)
+		{
+			printNodes(key.children[1]);
+		}
+	}
+	
+	public void setRoot(Number value)
+	{
+		rootNode.value = value;
+	}
+	
+	public void addNode(Number parentValue, Number newNodeValue)
 	{		
+		Node parent = new Node(parentValue);		
 		Node target = findNode(parent, rootNode);
+		Node newNode = new Node(newNodeValue);
 		target.setChild(newNode);
 	}
 	
@@ -43,6 +66,7 @@ public class BinaryTreeSample {
 	private class Node
 	{
 		Node[] children = new Node[2];
+		Node parent;
 		Number value;
 		
 		Node()
@@ -57,13 +81,43 @@ public class BinaryTreeSample {
 		
 		void setChild(Node child)
 		{
-			for(Node node : children){
-				if(node == null){
-					node = child;
-				}
+			if(this.children[0] == null)
+			{
+				this.children[0] = child;
+				this.children[0].parent = this;
+				return;
+			}
+			if(this.children[1] == null)
+			{
+				this.children[1] = child;
+				this.children[1].parent = this;
+				return;
 			}
 		}
 		
+		void printNode()
+		{
+			if(this.value != null)
+			{
+				System.out.println("Node: " + this + " (Parent=" + this.parent + ")");
+			}
+			if(children[0] != null)
+			{
+				System.out.println("Node.children[0]: "  + this.children[0]);
+			}
+			if(children[1] != null)
+			{
+				System.out.println("Node.children[1]: " + this.children[1]);
+			}
+			if(children[0] == null && children[1] == null)
+			{
+				System.out.println("Node is a leaf.");
+			}
+		}
+		
+		public String toString(){
+			return String.valueOf(this.value);
+		}
 		
 	}
 }
