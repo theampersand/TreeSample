@@ -8,12 +8,12 @@ public class TreeSampleHarness {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		BinaryTree binaryTreeSample = new BinaryTree();
-		binaryTreeSample.setRoot(7);
-		binaryTreeSample.addNode(7, 10);
-		binaryTreeSample.addNode(7, 9);
-		binaryTreeSample.addNode(10, 2);
-		binaryTreeSample.printNodes();
+		BinaryTree binaryTree = new BinaryTree();
+		binaryTree.setRoot(7);
+		binaryTree.addNode(7, 10);
+		binaryTree.addNode(7, 9);
+		binaryTree.addNode(10, 2);
+		binaryTree.printNodes();
 	}
 
 }
