@@ -1,6 +1,6 @@
 package andrew.datastructure;
 
-import tree.BinaryTree;
+import andrew.datastructure.tree.BinaryTree;
 
 public class TreeSampleHarness {
 

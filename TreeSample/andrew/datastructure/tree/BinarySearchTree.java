@@ -1,6 +1,6 @@
-package tree;
+package andrew.datastructure.tree;
 
-import node.BinarySearchNode;
+import andrew.datastructure.node.BinarySearchNode;
 
 public class BinarySearchTree extends BinaryTree {
 	BinarySearchNode rootNode = new BinarySearchNode();

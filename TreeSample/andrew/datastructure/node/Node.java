@@ -1,4 +1,4 @@
-package node;
+package andrew.datastructure.node;
 
 abstract public class Node{
 	public Node[] children = new Node[2];

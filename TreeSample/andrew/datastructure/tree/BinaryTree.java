@@ -1,9 +1,10 @@
-package tree;
+package andrew.datastructure.tree;
 import java.util.ArrayList;
 import java.util.List;
 
-import node.BinaryNode;
-import node.Node;
+import andrew.datastructure.node.BinaryNode;
+import andrew.datastructure.node.Node;
+
 
 
 public class BinaryTree {

@@ -1,4 +1,4 @@
-package node;
+package andrew.datastructure.node;
 
 public class BinaryNode extends Node {
 
