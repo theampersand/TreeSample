@@ -10,4 +10,14 @@ public class BinarySearchNode extends BinaryNode {
 	{
 		super(value);
 	}
+	
+	public void setChild(Node child)
+	{
+		if (child.value > this.value)
+		{
+			
+		}
+	}
+	
+	
 }
