@@ -21,7 +21,7 @@ public class BinaryTree {
 		printNodes(rootNode);
 	}
 	
-	private void printNodes(Node key)
+	private void printNodes(BinaryNode key)
 	{
 		if(key.value != null)
 		{
@@ -37,12 +37,12 @@ public class BinaryTree {
 		}
 	}
 	
-	public void setRoot(Number value)
+	public void setRoot(Integer value)
 	{
 		rootNode.value = value;
 	}
 	
-	public void addNode(Number parentValue, Number newNodeValue)
+	public void addNode(Integer parentValue, Integer newNodeValue)
 	{		
 		BinaryNode parent = new BinaryNode(parentValue);		
 		BinaryNode target = (BinaryNode) findNode(parent, rootNode);
@@ -50,7 +50,7 @@ public class BinaryTree {
 		target.setChild(newNode);
 	}
 	
-	private Node findNode(Node target, Node key)
+	private Node findNode(BinaryNode target, BinaryNode key)
 	{
 		if(key.value == target.value)
 		{

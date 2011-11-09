@@ -3,16 +3,16 @@ BinarySearchTree pseudocode
 add newNode to key
 if newNode > key
 {
-	if key.right == null
-		key.right = newNode
-	else
-		add newNode to key.right
-}
-if newNode < key
-{
 	if key.left == null
 		key.left = newNode
 	else
-		add newNode to key.left
+		add newNode to key.left subtree
+}
+if newNode < key
+{
+	if key.right == null
+		key.right = newNode
+	else
+		add newNode to key.right subtree
 }
 value already in tree
